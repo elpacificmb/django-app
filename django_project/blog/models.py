@@ -14,6 +14,9 @@ class Post(models.Model):
     # Define a default sort order for post, from newest to oldest
     class Meta:
         ordering = ['-publish']
+        indexes = [
+            models.Index(fields=['-publish']),
+        ]
 
     # Return a string in human readable format
     def __str__(self):
