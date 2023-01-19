@@ -27,3 +27,5 @@ Creating a default django app with python manage.py startapp myapp
 
 Opening the project folder with cd myapp
 
+### Using Python shell in a Django project
+python manage.py shell

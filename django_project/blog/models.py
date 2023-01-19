@@ -4,12 +4,22 @@ from django.utils import timezone
 
 # Create your models here.
 class Post(models.Model):
+
+    # Define status choice for draft or published posts
+    class Status(models.TextChoices):
+        DRAFT = 'DF', 'Draft'
+        PUBLISHED = 'PB', 'Published'
+
+    # Fields for a Blog Post
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250)
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    status = models.CharField(max_length=2,
+                              choices=Status.choices,
+                              default=Status.DRAFT)
 
     # Define a default sort order for post, from newest to oldest
     class Meta:
