@@ -3,7 +3,14 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 
-# Create your models here.
+# Create your managers here
+class PublishedManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset() \
+            .filter(status=Post.Status.PUBLISHED)
+
+
+# Create your models here
 class Post(models.Model):
     # Define status choice for draft or published posts
     class Status(models.TextChoices):
@@ -23,6 +30,8 @@ class Post(models.Model):
     status = models.CharField(max_length=2,
                               choices=Status.choices,
                               default=Status.DRAFT)
+    objects = models.Manager()  # The default manager
+    published = PublishedManager()  # Our custom manager
 
     # Define a default sort order for post, from newest to oldest
     class Meta:
