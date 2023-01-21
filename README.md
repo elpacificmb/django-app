@@ -43,6 +43,7 @@ python manage.py migrate
 python manage.py createsuperuser
 
 Admin site link http://127.0.0.1:8000/admin/
+Blog site link http://127.0.0.1:8000/blog/
 
 
 ### Creating requirements.txt file
