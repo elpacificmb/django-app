@@ -29,3 +29,24 @@ Opening the project folder with cd myapp
 
 ### Using Python shell in a Django project
 python manage.py shell
+
+### Creating an Initial migration for Models
+python manage.py makemigrations blog
+
+### Inspect SQL output from migration
+python manage.py sqlmigrate blog 0001
+
+### Applying all migrations
+python manage.py migrate
+
+### Creating a superuser for admin site
+python manage.py createsuperuser
+
+Admin site link http://127.0.0.1:8000/admin/
+
+
+### Creating requirements.txt file
+pip freeze > requirements.txt
+
+### Installing packages from requirements.txt file
+pip install requirements.txt
