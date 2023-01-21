@@ -50,4 +50,4 @@ Blog site link http://127.0.0.1:8000/blog/
 pip freeze > requirements.txt
 
 ### Installing packages from requirements.txt file
-pip install requirements.txt
+pip install -r requirements.txt
