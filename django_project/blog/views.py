@@ -91,7 +91,7 @@ def post_comment(request, post_id):
     post = get_object_or_404(Post, id=post_id, status=Post.Status.PUBLISHED)
     comment = None
     # A comment was posted
-    form = CommentForm(data=require_POST)
+    form = CommentForm(data=request.POST)
     if form.is_valid():
         # Create a Comment object without saving it to the database
         comment = form.save(commit=False)
