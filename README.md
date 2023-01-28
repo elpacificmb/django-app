@@ -8,7 +8,8 @@ Creating a Virtual environment with python -m venv my_env
 
 Activating the virtual env with .\my_env\Scripts\activate
 
-Installing Django with pip install Django~=4.1.0
+### Installing Django 4
+pip install Django~=4.1.0
 
 ### Creating a Django project
 Creating a default Django project with django-admin startproject myproject
@@ -51,3 +52,17 @@ pip freeze > requirements.txt
 
 ### Installing packages from requirements.txt file
 pip install -r requirements.txt
+
+### Installing django tagging application
+pip install django-taggit==3.0.0
+
+### Installing Markdown
+pip install markdown==3.4.1
+
+### Installing Postgres
+Download PostgreSQL installer from https://www.postgresql.org/download/
+Run and install the Postgres setup
+
+#### Installing Postgres adapter for Python
+pip install psycopg2
+pip install psycopg2-binary
