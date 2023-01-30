@@ -59,6 +59,11 @@ pip install django-taggit==3.0.0
 ### Installing Markdown
 pip install markdown==3.4.1
 
+### Download Fluent reader for feeds
+https://github.com/yang991178/fluent-reader/releases
+then install it
+add the url http://127.0.0.1:8000/blog/feed/ to its settings
+
 ### Installing Postgres
 Download PostgreSQL installer from https://www.postgresql.org/download/
 Run and install the Postgres setup
